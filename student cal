@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Student Mark Calculator</h2>
+
+    <input type="text" id="name" placeholder="Enter Student Name">
+
+    <input type="number" id="sub1" placeholder="Subject 1 Mark">
+
+    <input type="number" id="sub2" placeholder="Subject 2 Mark">
+
+    <input type="number" id="sub3" placeholder="Subject 3 Mark">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+    <p id="grade"></p>
+</div>
+<script>
+    
+    const calculate = () => {
+
+        let name = document.getElementById("name").value;
+        let m1 = Number(document.getElementById("sub1").value);
+        let m2 = Number(document.getElementById("sub2").value);
+        let m3 = Number(document.getElementById("sub3").value);
+
+        let total = m1 + m2 + m3;
+        let average = total/3
+    
+
+       let result= document.getElementById("result").innerHTML ="total mark"+total+"<br> <br>"+"average" + average
+        if(average>90){
+        let result=document .getElementById("grade").innerHTML="grade A"
+        }
+        else if(average>50){
+            let result=document.getElementById("grade").innerHTML="gradeB"
+        }
+        else{
+            let result=document.getElementById("grade").innerHTML=fail
+        }
+    }
+    
+        
+</script>
+    
+</body>
+</html>
